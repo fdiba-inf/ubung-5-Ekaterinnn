@@ -20,6 +20,12 @@ public class Search {
         int number = input.nextInt();
 
         int numberIndex = -1;
+        for (int index = 0; index < numbers.length; index++) {
+          if (numbers[index] == number) {
+            numberIndex = index;
+            break;
+          }
+        }
         // Search for number in numbers
 
         System.out.println("Number index: " + numberIndex);

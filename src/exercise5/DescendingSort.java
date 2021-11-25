@@ -16,6 +16,18 @@ public class DescendingSort {
         for (int index = 0; index < numbers.length; index++) {
             numbers[index] = input.nextInt();
         }
+        for (int index = 0; index < numbers.length - 1; index++) {
+           int minIndex = index;
+
+           for (int i = index + 1; i < numbers.length; i++) {
+             if (numbers[minIndex] > numbers[i]) {
+               minIndex = i;
+             }
+           }
+           int t = numbers[index];
+           numbers[index] = numbers[minIndex];
+           numbers[minIndex] = t;
+        }
 
         // Sort numbers in descending order
 
