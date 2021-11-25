@@ -21,7 +21,7 @@ public class DescendingSort {
            int minIndex = index;
 
            for (int i = index + 1; i < numbers.length; i++) {
-             if (numbers[minIndex] > numbers[i]) {
+             if (numbers[minIndex] < numbers[i]) {
                minIndex = i;
              }
            }
