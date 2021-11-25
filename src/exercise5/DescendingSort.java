@@ -18,19 +18,18 @@ public class DescendingSort {
         }
 
         for (int index = 0; index < numbers.length - 1; index++) {
-           int minIndex = index;
+           int maxIndex = index;
 
            for (int i = index + 1; i < numbers.length; i++) {
-             if (numbers[minIndex] > numbers[i]) {
-               minIndex = i;
+             if (numbers[maxIndex] > numbers[i]) {
+               maxIndex = i;
              }
            }
-           int temp = numbers[index];
-           numbers[index] = numbers[minIndex];
-           numbers[minIndex] = temp;
-        }
 
-      
+           int temp = numbers[index];
+           numbers[index] = numbers[maxIndex];
+           numbers[maxIndex] = temp;
+        }
 
         String numbersAsString = Arrays.toString(numbers);
         System.out.println("Sorted numbers: " + numbersAsString);
