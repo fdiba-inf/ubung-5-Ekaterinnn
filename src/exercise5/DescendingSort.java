@@ -21,16 +21,15 @@ public class DescendingSort {
            int minIndex = index;
 
            for (int i = index + 1; i < numbers.length; i++) {
-             if (numbers[minIndex] > numbers[i]) {
+             if (numbers[minIndex] < numbers[i]) {
                minIndex = i;
              }
            }
+
            int temp = numbers[index];
            numbers[index] = numbers[minIndex];
            numbers[minIndex] = temp;
         }
-
-      
 
         String numbersAsString = Arrays.toString(numbers);
         System.out.println("Sorted numbers: " + numbersAsString);
